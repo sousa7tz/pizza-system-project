@@ -1,0 +1,29 @@
+# virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# config n secrets
+.env
+*.env
+.env.local
+
+# cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ides stuff
+.vscode/
+.idea/
+*.swp
+
+# local db
+*.sqlite3
+*.db
+
+# build
+dist/
+build/
+*.egg-info/

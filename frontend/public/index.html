@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Napoli - Peça Agora</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/home.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-box">
+            <span class="logo-text">La Bella Napoli</span>
+            <div class="linha-italiana"></div>
+        </div>
+
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Busque por pizza, sabor ou ingrediente...">
+        </div>
+
+        <div class="nav-icons">
+            <button class="icon-btn"><i class="fas fa-map-marker-alt"></i></button>
+            <button class="icon-btn"><i class="far fa-heart"></i></button>
+            <button class="icon-btn cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge">2</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="promo-banner">
+            <div class="promo-info">
+                <h2>La Bella Napoli</h2>
+                <p>⭐ 4.9 (32-45 min) &nbsp;|&nbsp; Taxa R$ 9,90 &nbsp;|&nbsp; Mín. R$ 30</p>
+            </div>
+            <div class="promo-cupom">
+                <p><span class="destaque-verde">25% OFF</span> na primeira pizza • Código NAPOLI25</p>
+                <button class="btn-verde">Usar cupom</button>
+            </div>
+        </div>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>A verdadeira pizza napolitana na sua porta em até 40 minutos</h1>
+                <div class="hero-botoes">
+                    <button class="btn-verde">PEDIR AGORA</button>
+                    <button class="btn-outline">MONTAR PEDIDO</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cardapio">
+            <h2>Cardápio</h2>
+            
+            <div class="filtros">
+                <button class="btn-filtro ativo">Todas</button>
+                <button class="btn-filtro">Tradicionais</button>
+                <button class="btn-filtro">Especiais</button>
+            </div>
+
+            <div class="grid-produtos" id="vitrine">
+                <div class="card-produto">
+                    <div class="card-img-box">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80" alt="Margherita">
+                        <span class="tag-nota">⭐ 4.8</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Margherita Clássica</h3>
+                        <p>Queijo, manjericão fresco, molho de tomate pelati</p>
+                        <div class="card-footer">
+                            <span class="preco">R$ 44,90</span>
+                            <button class="btn-verde btn-add">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Pedido</h2>
+            <button class="btn-fechar" id="fechar-carrinho"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <p class="cart-vazio">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-linha">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">R$ 0,00</span>
+            </div>
+            <div class="cart-linha">
+                <span>Taxa de Entrega</span>
+                <span>R$ 9,90</span>
+            </div>
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total">R$ 9,90</span>
+            </div>
+            <button class="btn-verde btn-finalizar">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+    <script src="../src/js/api.js"></script>
+    <script src="../src/js/app.js"></script>
+</body>
+</html>

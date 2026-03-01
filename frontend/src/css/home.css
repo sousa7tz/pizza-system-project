@@ -1,0 +1,358 @@
+/* CABEÇALHO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent;
+}
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.linha-italiana {
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background: linear-gradient(to right, var(--verde-principal) 33%, white 33%, white 66%, var(--vermelho-italia) 66%);
+}
+
+/* BARRA DE PESQUISA */
+.search-box {
+    background-color: var(--bg-input);
+    padding: 12px 20px;
+    border-radius: var(--raio-redondo);
+    display: flex;
+    align-items: center;
+    width: 450px;
+}
+
+.search-box i {
+    color: var(--texto-cinza);
+    margin-right: 10px;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: var(--texto-claro);
+    width: 100%;
+    outline: none;
+}
+
+/* ÍCONES */
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn {
+    background-color: var(--bg-input);
+    color: var(--texto-claro);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--verde-principal);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL / BANNER PROMO (Glassmorphism) */
+.promo-banner {
+    background: rgba(39, 39, 42, 0.4);
+    /* Fundo translúcido */
+    backdrop-filter: blur(10px);
+    /* O Desfoque */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 30px;
+    border-radius: var(--raio-padrao);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.promo-info p {
+    color: var(--texto-cinza);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.promo-cupom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.destaque-verde {
+    color: var(--verde-principal);
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(to right, var(--bg-fundo) 20%, transparent 100%),
+        url('https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=1200&q=80') center right/cover;
+    border-radius: var(--raio-padrao);
+    padding: 80px 40px;
+    margin: 40px 0;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--texto-claro);
+    border: 1px solid var(--texto-cinza);
+    padding: 10px 20px;
+    border-radius: var(--raio-botao);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* CARDÁPIO & FILTROS */
+.cardapio h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.btn-filtro {
+    background-color: var(--bg-input);
+    color: var(--texto-claro);
+    border: none;
+    padding: 8px 20px;
+    border-radius: var(--raio-redondo);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-filtro.ativo {
+    background-color: var(--verde-principal);
+}
+
+/* GRID DE PRODUTOS */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD INDIVIDUAL */
+.card-produto {
+    background-color: var(--bg-card);
+    border-radius: var(--raio-padrao);
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-img-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.card-img-box img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tag-nota {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 13px;
+    color: var(--texto-cinza);
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ========================================== */
+/* CARRINHO LATERAL (OFFCANVAS)               */
+/* ========================================== */
+
+/* Fundo escuro que cobre o site quando o carrinho abre */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.cart-overlay.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* A barra lateral do carrinho */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    /* Começa escondido fora da tela */
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--bg-card);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    /* Animação de deslizar */
+}
+
+.cart-sidebar.aberto {
+    right: 0;
+}
+
+/* Classe que o JS vai usar para abrir */
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cart-header h2 {
+    font-size: 20px;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    color: var(--texto-claro);
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-fechar:hover {
+    color: var(--vermelho-italia);
+}
+
+/* Área onde ficam as pizzas no carrinho */
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-vazio {
+    text-align: center;
+    color: var(--texto-cinza);
+    margin-top: 40px;
+}
+
+/* Rodapé com totais e botão */
+.cart-footer {
+    padding: 20px;
+    background-color: var(--bg-fundo);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cart-linha {
+    display: flex;
+    justify-content: space-between;
+    color: var(--texto-cinza);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--texto-claro);
+}
+
+.btn-finalizar {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}

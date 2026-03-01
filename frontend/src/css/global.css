@@ -1,0 +1,49 @@
+/* PALETA DE CORES E VARIÁVEIS */
+:root {
+    --bg-fundo: #09090B; /* Preto bem profundo */
+    --bg-card: #18181B; /* Cinza super escuro pros cards */
+    --bg-input: #27272A;
+    --verde-principal: #009246;
+    --verde-hover: #007a3a;
+    --vermelho-italia: #CE2B37;
+    --texto-claro: #FAFAFA;
+    --texto-cinza: #A1A1AA;
+    
+    --raio-padrao: 12px;
+    --raio-botao: 8px;
+    --raio-redondo: 50px;
+}
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-fundo);
+    color: var(--texto-claro);
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* BOTÕES GLOBAIS */
+.btn-verde {
+    background-color: var(--verde-principal);
+    color: var(--texto-claro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--raio-botao);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-verde:hover { background-color: var(--verde-hover); }
